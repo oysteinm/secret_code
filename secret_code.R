@@ -7,6 +7,9 @@ library(readxl)
 library(httr)
 library(xlsx)
 
+# This procedure downloads the excel file from the url (instead of saving it locally)
+# and loads is as a tempfile.
+
 url <- "https://learnesy.com/wp-content/uploads/2021/02/Secret_Code.xlsx"
 
 GET(url, write_disk(tmpfi <- tempfile(fileext = ".xlsx")))
